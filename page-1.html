@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong|Audiowide">
+    
+    <style>
+    *{
+      box-sizing: border-box;
+    }
+    
+    html, body{
+      font-family: "Trirong", serif;
+    }
+    .heading {
+      font-family: "Audiowide", sans-serif;
+    }
+    
+      .checked{
+        color: orange;
+      }
+    </style>
+    
+    
+    
+  </head>
+  
+  
+  <title>Top 20 thriller Movies you can watch.</title>
+</head>
+
+<body>
+
+
+<div id="root"></div>
+
+<script type="text/babel">
+     
+     
+     function Movies (){
+       const movieList=[
+         {
+           id:1,
+           name: "Identity",
+           release: "2003",
+           rating: "7.3",
+           genre: "Mystery, Thriller.",
+           url: "#"
+         },
+         {
+           id:2,
+           name: "Se7en",
+           release: "1995",
+           rating: "8.6",
+           genre: "Mystery, Thriller.",
+           url: "#"
+         },
+         {
+           id:3,
+           name: "Fallen",
+           release: "1998",
+           rating: "7.0",
+           genre: "Mystery, Thriller.",
+           url: "#"
+         },
+         {
+           id:4,
+           name: "The Bone Collector",
+           release: "1999",
+           rating: "6.7",
+           genre: "Mystery, Thriller.",
+           url: "#"
+         },
+         {
+           id: 5,
+           name: "Secret",
+           release: "2004",
+           rating: "6.5",
+           genre: "Mystery, Thriller.",
+           url: "#"
+         },
+         {
+           id: 6,
+           name: "The Book of Eli",
+           release:"2010",
+           rating: "6.8",
+           genre: "Mystery, Thriller.",
+           url: "#"
+         },
+         {
+           id:7,
+           name: "Deja Vu",
+           release: "2006",
+           rating: "7.1",
+           genre: "Mystery, Thriller.",
+           url: "#" 
+         },
+         {
+           id:8,
+           name: "Donnie Darko",
+           release: "2001",
+           rating: "8.0",
+           genre: "Mystery, Thriller.",
+           url: "#"
+         },
+         {
+           id: 9,
+           name: "Sin city",
+           release: "2005",
+           rating: "8.0",
+           genre: "Mystery, Thriller.",
+           url: "#"
+           
+         },
+         {
+           id: 10,
+           name: "Pulp Fiction",
+           release: "1994",
+           rating: "8.9",
+           genre: "Mystery, Thriller.",
+           url: "#"
+         },
+         {
+           id: 11,
+           name: "Kill Bill: Vol.1",
+           release: "2003",
+           rating: "8.2",
+           genre: "Mystery, Thriller.",
+           url: "#"
+         },
+         {
+           id: 12,
+           name:"Kill Bill: Vol.2",
+           release: "2004",
+           rating: "8.0",
+           genre: "Mystery, Thriller.",
+           url: "#"
+         },
+         {
+           id: 13,
+           name: "Training Day",
+           release: "2001",
+           rating: "7.7",
+           genre: "Mystery, Thriller.",
+           url: "#"
+         },
+         {
+           id:14,
+           name: "The Hateful Eight",
+           release: "2015",
+           rating: "7.8",
+           genre: "Mystery, Thriller.",
+           url: "#"
+         },
+         {
+           id: 15,
+           name:"The Call (II)",
+           release: "2013",
+           rating: "6.7",
+           genre: "Mystery, Thriller.",
+           url: "#"
+         },
+         {
+         id: 16,
+         name: "The Recruit",
+         release: "2003",
+         rating: "6.6",
+         genre: "Mystery, Thriller.",
+         url: "#"
+         },
+         {
+           id: 17,
+           name: "Lucky Number Soevin",
+           release: "2006",
+           rating: "8.2",
+           genre: "Mystery, Thriller.",
+           url: "#"
+         },
+         {
+           id: 18,
+           name: "Baby Driver",
+           release: "2017",
+           rating: "7.6",
+           genre: "Mystery, Thriller.",
+           url: "#"
+         },
+         {
+           id: 19,
+           name: "What Lies Beneath.",
+           release: "2000",
+           rating: "6.6",
+           genre: "Mystery, Thriller.",
+           url: "#"
+         },
+         {
+           id: 20,
+           name:"Shutter Island",
+           release: "2010",
+           rating: "8.2",
+           genre: "Mystery, Thriller.",
+           url: "#"
+         }
+         
+     
+         ]
+         
+
+
+       return (
+         <div>
+         
+         <ul>
+     {
+       movieList.map((data)=>(
+         <li key={data.id}>
+         <p><b>{data.name}</b>{`  `}
+         <span> release: {data.release}</span>
+         </p>
+         <p><span style={{color: "blue"}}>imdb </span> 
+         rating: <span className="fa fa-star checked"></span> {data.rating} </p>
+         <p>genre: {data.genre}</p>
+         <p>
+         <a href={data.url} target="_blank">
+          Watch for free.
+         </a> {` `}
+         <span className="fa fa-external-link"></span>
+         </p>
+         </li>
+         
+         ))
+     }
+         
+         </ul>
+         
+         </div>
+         
+         )
+     }
+     
+     
+     //Header
+     
+     const Heading=()=>{
+       
+       const style={
+         background: 'black',
+         color: 'white',
+         fontSize: '18px',
+         margin: "-8px",
+         padding: "20px",
+         boxSizing: "border-box",
+         textAlign: "center"
+       }
+       
+       return (
+         <div style={style}>
+         <h3 className="heading">Top 20 Movies that you can watch.</h3>
+         </div>
+         )
+     }
+     
+     
+     //Footer
+  const Footer=()=>{
+    const style={
+      margin: "-8px",
+      padding: "8px",
+      background: "black",
+      color: "white",
+      
+    }
+    return (
+      <div style={style}>
+      <p>This is a demo page created by 
+       <b style={{color: "red"}}> @shakilmith</b>
+      </p>
+      </div>
+      )
+  }
+  
+  
+ function App(){
+   
+   
+  return(
+    <div>
+    <Heading />
+    <br/>
+    <br/>
+    
+    <Movies />
+    <Footer />
+    </div>
+    
+    
+    )
+  }
+      
+      
+      
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App/>);
+    </script>
+
+
+</body>
+
+</html>
